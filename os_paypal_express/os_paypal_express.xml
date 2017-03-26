@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="eshopplugin" group="payment">
+	<name>os_paypal_express</name>
+	<title>PayPal Express</title>
+	<author>Joshua E. Vines</author>
+	<creationDate>02-12-2017</creationDate>
+	<copyright>Copyright © 2017 Phoenix Technological Research</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>dev@phoenixresearch.biz</authorEmail>
+	<authorUrl>www.phoenixresearch.biz</authorUrl>
+	<version>0.1.0</version>
+	<description>PayPal Express Payment Plugin for EShop</description>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_eshop/elements/">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_eshop/elements">
+				<field name="paypal_mode" type="list" label="PayPal Mode" description="Set to Live or Sandbox Mode">
+					<option value="live">Live</option>
+					<option value="sandbox">Sandbox</option>
+				</field>
+
+				<!-- Live Mode Options -->
+				<field name="client_id_l" type="text" size="254" label="Client Id (developer) (live mode)" description="Enter Client Id from PayPal developer account" default=""></field>
+				<field name="secret_l" type="text" size="254" label="Secret (developer) (live mode)" description="Enter Secret from PayPal developer account" default=""></field>
+				<field name="email_l" type="text" size="254" label="Merchant Email (live mode)" description="Enter email associated with PayPal merchant account" default=""></field>
+				<field name="merchant_id_l" type="text" size="16" label="Merchant Id (live mode)" description="Enter encrypted PayPal account id" default=""></field>
+				<field name="timeout_l" type="text" size="3" label="Timeout (live mode)" description="Enter live mode timeout in seconds" default="30"></field>
+				<field name="log_enabled_l" type="list" label="Log Enabled (live mode)" description="" default="0">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="log_path_l" type="text" size="254" label="Path (live mode)" description="Enter path to store live mode PayPal log file. Can point to off-line location." default=""></field>
+				<field name="log_level_l" type="list" label="Log Level (live mode)" description="" default="INFO">
+					<option value="INFO">INFO</option>
+					<option value="WARN">WARN</option>
+					<option value="ERROR">ERROR</option>
+				</field>
+
+				<!-- Sandbox Mode Options -->
+				<field name="client_id_s" type="text" size="254" label="Client Id (developer) (sandbox mode)" description="Enter Client Id from PayPal developer account" default=""></field>
+				<field name="secret_s" type="text" size="254" label="Secret (developer) (sandbox mode)" description="Enter Secret from PayPal developer account" default=""></field>
+				<field name="email_s" type="text" size="254" label="Merchant Email (sandbox mode)" description="Enter email associated with PayPal merchant account" default=""></field>
+				<field name="merchant_id_s" type="text" size="16" label="Merchant Id (sandbox mode)" description="Enter encrypted PayPal account id" default=""></field>
+				<field name="timeout_s" type="text" size="3" label="Timeout (sandbox mode)" description="Enter live mode timeout in seconds" default="30"></field>
+				<field name="log_enabled_s" type="list" label="Log Enabled (sandbox mode)" description="" default="0">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="log_path_s" type="text" size="254" label="Path (sandbox mode)" description="Enter path to store live mode PayPal log file. Can point to off-line location." default=""></field>
+				<field name="log_level_s" type="list" label="Log Level (sandbox mode)" description="" default="DEBUG">
+					<option value="DEBUG">DEBUG</option>
+					<option value="INFO">INFO</option>
+					<option value="WARN">WARN</option>
+					<option value="ERROR">ERROR</option>
+				</field>
+
+				<field name="customer_groups" type="eshopcustomergroups" label="Customer Groups" description="Choose the customer groups to apply PayPal Payment method."></field>
+				<field name="taxclass_id" type="eshoptaxclass" label="Tax Class"></field>
+				<field name="geozone_id" type="eshopgeozone" label="Geo Zone"></field>
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename>os_paypal_preferred.php</filename>
+		<folder>ABC</folder>
+	</files>
+	<installsql />
+	<installfile />
+</install>
