@@ -6,5 +6,3 @@ This extension and the acompanying PayPal service requires a business with a US 
 
 The following is a screenshot taken form the Administrator page:
 ![Administrator Page](/screenshot_administrator.png)
-#### To-Do:
-- [ ] Add discriptions/markup to screenshot
