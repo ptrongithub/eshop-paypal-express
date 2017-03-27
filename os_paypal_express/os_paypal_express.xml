@@ -60,8 +60,7 @@
 		</fields>
 	</config>
 	<files>
-		<filename>os_paypal_preferred.php</filename>
-		<folder>ABC</folder>
+		<filename>os_paypal_express.php</filename>
 	</files>
 	<installsql />
 	<installfile />
